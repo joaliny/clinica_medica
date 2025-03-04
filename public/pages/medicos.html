@@ -1,15 +1,53 @@
-<h2>Médicos Cadastrados</h2>
-<div id="tabela-medicos" class="tabela-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>CRM</th>
-                <th>Especialidade</th>
-            </tr>
-        </thead>
-        <tbody id="corpo-tabela-medicos">
-            <!-- Os dados dos médicos serão inseridos aqui dinamicamente -->
-        </tbody>
-    </table>
-</div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Médicos</title>
+    <link rel="stylesheet" href="../css/medico.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-logo">MedCare Clínica Médica</a>
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="conteudo-principal">
+        <section>
+            <h1>Médicos Cadastrados</h1>
+            
+            <!-- Botão de Cadastrar Médicos -->
+            <div class="botao-container">
+                <button id="cadastrar-medico" class="botao-cadastrar">Cadastrar Médico</button>
+            </div>
+
+            <div id="tabela-medicos" class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>CRM</th>
+                            <th>Especialidade</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpo-tabela-medicos">
+                        <!-- Os dados dos médicos serão inseridos aqui dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Clínica Médica - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

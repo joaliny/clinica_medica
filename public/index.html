@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador - Clínica Médica</title>
+    <title>Clínica Médica</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Menu Lateral -->
-        <aside class="menu-lateral">
-            <h2>Menu</h2>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-logo">MedCare Clínica Médica</a>
+            <ul class="navbar-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+        <div class="botoes-container">
             <button onclick="carregarPagina('medicos')">Médicos</button>
             <button onclick="carregarPagina('pacientes')">Pacientes</button>
             <button onclick="carregarPagina('consultas')">Consultas</button>
-        </aside>
-
-        <!-- Conteúdo Principal -->
-        <main class="conteudo-principal" id="conteudo-principal">
-            <h1>Bem-vindo ao Sistema da Clínica Médica</h1>
-            <p>Selecione uma opção no menu lateral para começar.</p>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <script src="js/scripts.js"></script>
 </body>
