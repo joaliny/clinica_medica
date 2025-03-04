@@ -1,0 +1,64 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #E5E8ED; /* Cor de fundo de fallback */
+    background-image: url('img/1.jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Menu Lateral */
+.menu-lateral {
+    width: 250px;
+    background-color: #293D51;
+    color: white;
+    padding: 20px;
+}
+
+.menu-lateral h2 {
+    margin-top: 15px; /* Adiciona espaçamento acima do título "Menu" */
+    margin-bottom: 60px; /* Adiciona espaçamento abaixo do menu */
+    text-align: center;
+}
+
+.menu-lateral button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Espaçamento entre os botões */
+    background-color: #0345ea43;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px; /* Adiciona espaçamento entre as modais */
+    font-size: 15px;
+}
+
+.menu-lateral button:hover {
+    background-color: #0a1b275d;
+}
+
+/* Conteúdo Principal */
+.conteudo-principal {
+    flex: 1;
+    padding: 8px;
+    color: #2e0078;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    text-align: center;  
+}
+   
+
+
