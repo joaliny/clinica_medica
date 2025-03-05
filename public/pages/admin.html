@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .sidebar {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .sidebar h2 {
+            margin-top: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .sidebar ul li a:hover {
+            color: #3498db;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+        .content h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Administrador</h2>
+        <ul>
+            <li><a href="#cadastrar-medico">Cadastrar médico</a></li>
+            <li><a href="#cadastrar-funcionario">Cadastrar funcionário</a></li>
+            <li><a href="#relatorio-pacientes">Gerar relatório de pacientes atendidos</a></li>
+            <li><a href="#relatorio-faturamento">Gerar relatório de faturamento</a></li>
+            <li><a href="#relatorio-horarios">Gerar relatório de horários ocupados</a></li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <h1>Painel Administrativo</h1>
+
+        <!-- Seção de Cadastrar Médico -->
+        <div id="cadastrar-medico">
+            <h2>Cadastrar Médico</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome-medico">Nome:</label>
+                    <input type="text" class="form-control" id="nome-medico" required>
+                </div>
+                <div class="form-group">
+                    <label for="crm-medico">CRM:</label>
+                    <input type="text" class="form-control" id="crm-medico" required>
+                </div>
+                <div class="form-group">
+                    <label for="especialidade-medico">Especialidade:</label>
+                    <input type="text" class="form-control" id="especialidade-medico" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Seção de Cadastrar Funcionário -->
+        <div id="cadastrar-funcionario">
+            <h2>Cadastrar Funcionário</h2>
+            <form>
+                <div class="form-group">
+                    <label for="nome-funcionario">Nome:</label>
+                    <input type="text" class="form-control" id="nome-funcionario" required>
+                </div>
+                <div class="form-group">
+                    <label for="cargo-funcionario">Cargo:</label>
+                    <input type="text" class="form-control" id="cargo-funcionario" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-funcionario">Email:</label>
+                    <input type="email" class="form-control" id="email-funcionario" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+
+        <!-- Seção de Relatório de Pacientes Atendidos -->
+        <div id="relatorio-pacientes">
+            <h2>Relatório de Pacientes Atendidos</h2>
+            <p>Selecione o período para gerar o relatório:</p>
+            <form>
+                <div class="form-group">
+                    <label for="data-inicio">Data de Início:</label>
+                    <input type="date" class="form-control" id="data-inicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-fim">Data de Fim:</label>
+                    <input type="date" class="form-control" id="data-fim" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Gerar Relatório</button>
+            </form>
+        </div>
+
+        <!-- Seção de Relatório de Faturamento -->
+        <div id="relatorio-faturamento">
+            <h2>Relatório de Faturamento</h2>
+            <p>Selecione o período para gerar o relatório:</p>
+            <form>
+                <div class="form-group">
+                    <label for="data-inicio-faturamento">Data de Início:</label>
+                    <input type="date" class="form-control" id="data-inicio-faturamento" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-fim-faturamento">Data de Fim:</label>
+                    <input type="date" class="form-control" id="data-fim-faturamento" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Gerar Relatório</button>
+            </form>
+        </div>
+
+        <!-- Seção de Relatório de Horários Ocupados -->
+        <div id="relatorio-horarios">
+            <h2>Relatório de Horários Ocupados</h2>
+            <p>Selecione o período para gerar o relatório:</p>
+            <form>
+                <div class="form-group">
+                    <label for="data-inicio-horarios">Data de Início:</label>
+                    <input type="date" class="form-control" id="data-inicio-horarios" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-fim-horarios">Data de Fim:</label>
+                    <input type="date" class="form-control" id="data-fim-horarios" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Gerar Relatório</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

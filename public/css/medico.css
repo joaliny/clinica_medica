@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    background-image: url('img/1.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center;
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #293d5176;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-menu li a:hover {
+    text-decoration: underline;
+}
+
+
+.btn-group .btn {
+    transition: background-color .3s ease;
+}
+
+.panel-title {
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display:flex;
+    color: #525252;
+}
+
+
+
+
+.modal-header {
+    background-color: #f8f9fa; /* Cor de fundo clara */
+    border-bottom: 2px solid #007bff; /* Borda inferior com cor de destaque */
+    padding: 15px; /* Espaçamento interno */
+    display: flex; /* Usando Flexbox para alinhar os itens */
+    justify-content: space-between; /* Espaço entre o título e o botão de fechar */
+    align-items: center; /* Alinhar os elementos verticalmente */
+}
+
+.modal-title {
+    font-size: 20px; /* Tamanho da fonte do título */
+    font-weight: bold; /* Deixar o título em negrito */
+    color: #eaeaea; /* Cor do texto */
+}
+
+.close {
+    position: absolute; /* Permite posicionar o botão dentro do modal */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância do lado direito */
+    color: #323232; /* Cor do botão de fechar */
+    font-size: 30px; /* Tamanho do ícone */
+    cursor: pointer; /* Cursor ao passar o mouse */
+    transition: color 0.1s ease; /* Transição suave ao passar o mouse */
+}
+
+
+.close:hover {
+    color: #ff0000; /* Cor do botão ao passar o mouse */
+}
+
+
+
+
+.panel-table .panel-body {
+    padding: 0;
+}
+
+.table > thead > tr > th {
+    border-bottom: none;
+}
+
+.panel-footer, .panel-table .panel-body .table-bordered {
+    border-style: none;
+    margin: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align: center;
+    width: 50px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th.col-tools {
+    text-align: center;
+    width: 120px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+    border-right: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+    border-left: 0;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td {
+    border-bottom: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th {
+    border-top: 0;
+}
+
+.pagination > li > a, .pagination > li > span {
+    border-radius: 50% !important;
+    margin: 0 5px;
+}
+
+.pagination {
+    margin: 0;
+}
+
+/* inicio do modal de cadastrar medico */
+/* Estilos para o modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #3498db;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Estilos para o botão "Add row" */
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    align-items: center;
+   
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
