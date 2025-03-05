@@ -49,38 +49,6 @@ async function carregarPagina(pagina) {
 }
 
 
-
-// Função para carregar os médicos
-async function carregarMedicos() {
-    try {
-        console.log('Carregando médicos...');
-        const response = await fetch('http://localhost:3000/medicos');
-        console.log('Resposta recebida:', response);
-        if (!response.ok) {
-            throw new Error('Erro ao buscar médicos');
-        }
-
-        const medicos = await response.json();
-        console.log('Dados recebidos:', medicos);
-
-        const corpoTabela = document.getElementById('corpo-tabela-medicos');
-        corpoTabela.innerHTML = '';
-
-        medicos.forEach(medico => {
-            const linha = document.createElement('tr');
-            linha.innerHTML = `
-                <td>${medico.nome}</td>
-                <td>${medico.crm}</td>
-                <td>${medico.especialidade}</td>
-            `;
-            corpoTabela.appendChild(linha);
-        });
-    } catch (error) {
-        console.error('Erro ao carregar médicos:', error);
-    }
-}
-
-
 // Função para carregar os pacientes
 async function carregarPacientes() {
     try {
@@ -139,3 +107,6 @@ async function carregarConsultas() {
 function carregarPagina(pagina) {
     window.location.href = `pages/${pagina}.html`;
 }
+
+// ---------------------------------------------------
+

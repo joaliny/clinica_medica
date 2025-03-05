@@ -12,13 +12,15 @@ body {
     background-image: url('img/1.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover; /* Faz a imagem cobrir toda a área */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center; 
+    background-position: center;
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
 }
-       
 
 /* Navbar */
 .navbar {
-    background-color: #293D51;
+    background-color: #293d5176;
     padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -56,10 +58,10 @@ body {
 
 /* Conteúdo Principal */
 .conteudo-principal {
+    flex: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Altura total menos a altura da navbar */
 }
 
 .botoes-container {
@@ -82,6 +84,15 @@ body {
     background-color: darkblue; /* Muda a cor no hover para azul escuro */
 }
 
+/* Rodapé */
+footer {
+    /* background-color: #343a407e; */
+    color: rgb(5, 5, 5);
+    text-align: center;
+    padding: 5px 0;
+    margin-top: auto; /* Garante que o rodapé seja empurrado para o final */
+    font-size: 15px;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {

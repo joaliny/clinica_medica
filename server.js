@@ -15,26 +15,29 @@ const db = mysql.createConnection({
 });
 
 db.connect((err) => {
-    if (err) throw err;
+    if (err) {
+        console.error('Erro ao conectar ao MySQL:', err.stack);
+        return;
+    }
     console.log('Conectado ao MySQL!');
 });
 
-// Rota para listar pacientes
-app.get('/pacientes', (req, res) => {
-    const sql = 'SELECT * FROM pacientes';
-    db.query(sql, (err, result) => {
-        if (err) throw err;
-        res.json(result);
-    });
-});
+// Rota para cadastrar um médico
+app.post('/medicos', (req, res) => {
+    const { nome, crm, especialidade } = req.body;
 
-// Rota para cadastrar um paciente
-app.post('/pacientes', (req, res) => {
-    const { nome, cpf, telefone } = req.body;
-    const sql = 'INSERT INTO pacientes (nome, cpf, telefone) VALUES (?, ?, ?)';
-    db.query(sql, [nome, cpf, telefone], (err, result) => {
-        if (err) throw err;
-        res.json({ message: 'Paciente cadastrado com sucesso!' });
+    // Validação simples
+    if (!nome || !crm || !especialidade) {
+        return res.status(400).json({ message: 'Todos os campos são obrigatórios' });
+    }
+
+    const sql = 'INSERT INTO medicos (nome, crm, especialidade) VALUES (?, ?, ?)';
+    db.query(sql, [nome, crm, especialidade], (err, result) => {
+        if (err) {
+            console.error('Erro ao cadastrar médico:', err.stack);
+            return res.status(500).json({ message: 'Erro ao cadastrar médico' });
+        }
+        res.json({ message: 'Médico cadastrado com sucesso!' });
     });
 });
 
@@ -42,7 +45,10 @@ app.post('/pacientes', (req, res) => {
 app.get('/medicos', (req, res) => {
     const sql = 'SELECT * FROM medicos';
     db.query(sql, (err, result) => {
-        if (err) throw err;
+        if (err) {
+            console.error('Erro ao buscar médicos:', err.stack);
+            return res.status(500).json({ message: 'Erro ao buscar médicos' });
+        }
         res.json(result);
     });
 });
