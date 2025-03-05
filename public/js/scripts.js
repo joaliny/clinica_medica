@@ -185,3 +185,5 @@ async function carregarMedicos() {
 // Carrega os médicos ao abrir a página
 carregarMedicos();
 
+// ------------------------------------------------------------------------------------
+
